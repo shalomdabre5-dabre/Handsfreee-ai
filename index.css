@@ -1,0 +1,26 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  @apply bg-navy-950 text-slate-100 antialiased;
+  background-image:
+    radial-gradient(60rem 30rem at 10% -10%, rgba(139, 92, 246, 0.18), transparent),
+    radial-gradient(50rem 28rem at 100% 0%, rgba(34, 211, 238, 0.12), transparent);
+  background-attachment: fixed;
+}
+
+.glass {
+  @apply rounded-2xl border border-white/10 bg-white/5 backdrop-blur-md shadow-xl;
+}
+
+.btn {
+  @apply inline-flex items-center justify-center gap-2 rounded-xl px-5 py-3 text-base font-semibold transition
+         focus:outline-none focus-visible:ring-4 focus-visible:ring-brand-cyan/60 disabled:opacity-40 disabled:cursor-not-allowed;
+}
+.btn-primary { @apply bg-gradient-to-r from-brand-purple to-brand-cyan text-navy-950 hover:brightness-110; }
+.btn-ghost { @apply border border-white/15 bg-white/5 hover:bg-white/10; }
+.btn-danger { @apply bg-red-600 text-white hover:bg-red-500; }
+
+/* Element currently under the head-controlled pointer */
+.hf-target { outline: 3px solid #22d3ee !important; outline-offset: 3px; }
